@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Bean;
 
 import emsi.projet.client.entities.Client;
 import emsi.projet.client.repositories.ClientRepository;
@@ -16,6 +17,7 @@ public class ClientApplication {
 		SpringApplication.run(ClientApplication.class, args);
 		
 	}
+	@Bean
 	CommandLineRunner initialiserBaseH2(ClientRepository clientRepository) {
         return args -> {
         	clientRepository.save(new Client(Long.parseLong("1"), "Rabab", "SELIMANI", Float.parseFloat("23")));
