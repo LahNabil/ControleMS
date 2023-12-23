@@ -1,4 +1,4 @@
-package emsi.projet.gateway.entities;
+package emsi.projet.car.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

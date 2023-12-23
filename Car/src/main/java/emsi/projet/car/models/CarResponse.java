@@ -1,10 +1,10 @@
-package emsi.projet.gateway.models;
-import emsi.projet.gateway.entities.Client;
+package emsi.projet.car.models;
+
+import emsi.projet.car.entities.Client;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 
 @Builder
 @Data
@@ -17,5 +17,4 @@ public class CarResponse {
 	private String model;
 	private String matricule;
 	private Client client;
-
 }

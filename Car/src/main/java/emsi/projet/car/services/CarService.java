@@ -1,10 +1,10 @@
-package emsi.projet.gateway.services;
+package emsi.projet.car.services;
 
 import java.util.List;
 
-import emsi.projet.gateway.models.CarResponse;
+import emsi.projet.car.models.CarResponse;
 
-public interface CarServiceInt {
+public interface CarService {
 	
 	List<CarResponse> findAll();
     CarResponse findById(Long id) throws Exception;

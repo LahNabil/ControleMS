@@ -1,4 +1,4 @@
-package emsi.projet.gateway.entities;
+package emsi.projet.car.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,8 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 public class Car {
@@ -20,6 +20,5 @@ public class Car {
 	private String model;
 	private String matricule;
 	private Long client_id;
-	
 
 }
