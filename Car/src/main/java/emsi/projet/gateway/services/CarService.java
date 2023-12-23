@@ -20,11 +20,12 @@ public class CarService implements CarServiceInt {
 	    private CarRepository carRepository;
 	    @Autowired
 	    private RestTemplate restTemplate;
-	    private final String URL="http://localhost:8888";
+	    
+	    private final String URL="http://localhost:8888/SERVICE-CLIENT";
 	    @Override
 	    public List<CarResponse> findAll() {
 	        List<Car> cars = carRepository.findAll();
-	        Client[] clients = restTemplate.getForObject(URL+"/SERVICE-CLIENT/api/client", Client[].class);
+	        Client[] clients = restTemplate.getForObject(URL+"/api/client", Client[].class);
 	        return cars.stream().map(car -> mapToCarResponse(car, clients)).toList();
 	    }
 
