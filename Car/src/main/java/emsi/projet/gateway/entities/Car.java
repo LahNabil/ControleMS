@@ -1,7 +1,8 @@
-package emsi.projet.client.entities;
+package emsi.projet.gateway.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,12 +12,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Client {
-	
+public class Car {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nom;
-	private float age;
+	private String brand;
+	private String model;
+	private String matricule;
+	private Long client_id;
+	
 
 }
